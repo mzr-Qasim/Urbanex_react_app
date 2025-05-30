@@ -1,0 +1,93 @@
+
+$theme-color: #F45905;
+
+body {
+    overflow: hidden;
+    overflow-y: auto;
+        // font-family: 'Involve', sans-serif;
+    font-family: "Montserrat", sans-serif;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'><circle cx='0.5' cy='0.5' r='0.2' fill='black'/></svg>") 0.5 0.5, auto;
+    
+
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+a,
+button,
+p,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+a {
+    text-decoration: none;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1.5 1.5'><circle cx='0.75' cy='0.75' r='0.4' fill='black'/></svg>") 0.75 0.75, auto!important;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+}
+
+.custom-container-lg{
+    max-width: 1800px;
+}
+
+
+.theme-btn{
+    display: inline-block;
+    padding: .75rem 1.75rem;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    font-weight: 700;
+    font-size: clamp(.9rem, 2vw, 1rem);
+    transition: all ease-in-out .3s;
+}
+
+
+
+.primary-btn-icon{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: white;
+    position: relative;
+        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1.5 1.5'><circle cx='0.75' cy='0.75' r='0.4' fill='white'/></svg>") 0.75 0.75, auto!important;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 40%;
+        height: 100%;
+        background-color: black;
+        transition: all ease-in-out .3s;
+    }
+    &:hover{
+        &::after{
+            width: 100%;
+        }
+    }
+    i{
+        font-size: .8rem;
+    }
+
+
+}
