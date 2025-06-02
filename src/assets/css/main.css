@@ -12009,7 +12009,6 @@ body {
   overflow: hidden;
   overflow-y: auto;
   font-family: "Montserrat", sans-serif;
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'><circle cx='0.5' cy='0.5' r='0.2' fill='black'/></svg>") 0.5 0.5, auto;
 }
 
 h1, .h1,
@@ -12029,13 +12028,16 @@ figure {
   padding: 0;
 }
 
+p {
+  line-height: 2.5rem;
+}
+
 ul {
   list-style-type: none;
 }
 
 a {
   text-decoration: none;
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1.5 1.5'><circle cx='0.75' cy='0.75' r='0.4' fill='black'/></svg>") 0.75 0.75, auto !important;
 }
 
 button {
@@ -12047,6 +12049,12 @@ button {
   max-width: 1800px;
 }
 
+.partial-container-right {
+  max-width: calc(1320px + 50% - 660px);
+  padding-left: 1rem;
+  margin-left: auto;
+}
+
 .theme-btn {
   display: inline-block;
   padding: 0.75rem 1.75rem;
@@ -12055,18 +12063,17 @@ button {
   justify-content: center;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
   transition: all ease-in-out 0.3s;
+  font-weight: 500;
 }
 
 .primary-btn-icon {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: white;
-  font-weight: 700;
+  color: #ffffff;
   position: relative;
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1.5 1.5'><circle cx='0.75' cy='0.75' r='0.4' fill='white'/></svg>") 0.75 0.75, auto !important;
 }
 .primary-btn-icon::after {
   content: "";
@@ -12086,29 +12093,72 @@ button {
   font-size: 0.8rem;
 }
 
-.secondary-btn-icon {
+.secondary-btn {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  color: black;
-  border: 1px solid black;
-  font-weight: 600;
+  color: #000000;
+  border: 1px solid #000000;
+  z-index: 1;
 }
-.secondary-btn-icon:hover {
-  color: white;
-  background-color: black;
+.secondary-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%);
+  background-color: #000000;
+  width: 1.5rem;
+  height: 1px;
+  z-index: 2;
+  transition: all ease-in-out 0.3s;
+}
+.secondary-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%);
+  background-color: #000000;
+  width: 1.5rem;
+  height: 1px;
+  z-index: 2;
+  transition: all ease-in-out 0.3s;
+}
+.secondary-btn:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+.secondary-btn:hover::before {
+  background-color: #ffffff;
+}
+.secondary-btn:hover::after {
+  background-color: #ffffff;
 }
 
 .section-title {
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 2.8rem);
   color: black;
   font-weight: 600;
 }
+.section-title span {
+  display: block;
+  font-size: 45%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
 
 .navbar-wrapper {
-  background-color: white;
   padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 5rem;
+  background-color: #ffffff;
 }
 
 .main_logo {
@@ -12136,8 +12186,6 @@ button {
   font-weight: 700;
   font-size: 0.8rem;
   text-transform: uppercase;
-  height: 100%;
-  padding: 2rem 0;
 }
 
 .ham_btn {
@@ -12146,13 +12194,13 @@ button {
   justify-content: center;
   display: none;
 }
-
-.icon-hamburger {
-  font-size: 1.2rem;
+.ham_btn i {
+  font-size: 1.5rem;
 }
 
 .main_hero_section {
-  padding-bottom: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 8rem;
 }
 
 .main_hero_wrapper {
@@ -12178,7 +12226,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: #000000;
   opacity: 0.2;
   z-index: 2;
 }
@@ -12186,7 +12234,7 @@ button {
 .main_hero-caption {
   z-index: 3;
   width: 100%;
-  color: white;
+  color: #ffffff;
 }
 .main_hero-caption .main_hero_heading {
   font-size: clamp(3rem, 6vw, 7rem);
@@ -12197,19 +12245,8 @@ button {
   display: block;
 }
 .main_hero-caption p {
-  color: rgb(244, 244, 244);
   font-size: clamp(1.5rem, 2vw, 2rem);
   line-height: 2.5rem;
-}
-
-.main-hero-pagination {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: white;
-  width: 50%;
-  padding: 3rem;
-  z-index: 50;
 }
 
 .sideMenuShow {
@@ -12217,7 +12254,7 @@ button {
 }
 
 section.About_Us_Section {
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
 }
 section.About_Us_Section .col-inner {
   display: flex;
@@ -12228,12 +12265,12 @@ section.About_Us_Section .left-section {
   padding: 3rem 0;
 }
 section.About_Us_Section .left-section p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
 }
 section.About_Us_Section .right-section figure {
   width: 100%;
-  aspect-ratio: 1/1.2;
+  aspect-ratio: 1/1;
   height: 100%;
 }
 section.About_Us_Section .right-section figure img {
@@ -12243,16 +12280,64 @@ section.About_Us_Section .right-section figure img {
      object-fit: cover;
 }
 
+section.last_projects {
+  padding-bottom: 10rem;
+}
+section.last_projects .load-more-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.last_projects_inner .project-card {
+  padding-bottom: 4rem;
+  height: 100%;
+}
+.last_projects_inner .project-card figure {
+  width: 100%;
+  aspect-ratio: 1/0.6;
+  overflow: hidden;
+}
+.last_projects_inner .project-card figure img {
+  width: 100%;
+  height: 120%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all ease-in-out 0.4s;
+}
+.last_projects_inner .project-card figure:hover img {
+  transform: translateY(-15%);
+}
+.last_projects_inner .project-card .card-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.last_projects_inner .project-card .card-caption a {
+  color: #000000;
+  transition: all ease-in-out 0.3s;
+}
+.last_projects_inner .project-card .card-caption a h4, .last_projects_inner .project-card .card-caption a .h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.last_projects_inner .project-card .card-caption a:hover {
+  color: #5d5d5d;
+}
+
+@media (max-width: 1199px) {
+  .last_projects_inner .project-card figure {
+    aspect-ratio: 1/0.8;
+  }
+}
 @media (max-width: 991px) {
   .nav-collapse {
-    overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
     width: 300px;
     height: 100vh;
     transform: translateX(-100%);
-    background-color: black;
+    background-color: #000000;
     transition: all ease-in-out 0.5s;
     z-index: 100;
     display: flex;
@@ -12268,15 +12353,15 @@ section.About_Us_Section .right-section figure img {
     margin-bottom: 1.5rem;
   }
   .nav-collapse ul li a {
-    color: white;
+    color: #ffffff;
   }
   .ham_btn {
     display: block;
   }
-  section.About_Us_Section .left-section {
-    padding-bottom: 5rem;
-  }
   section.About_Us_Section .right-section figure {
-    aspect-ratio: 1/0.7;
+    aspect-ratio: 1/0.8;
+  }
+  .last_projects_inner .project-card figure {
+    aspect-ratio: 1/0.5;
   }
 }/*# sourceMappingURL=main.css.map */

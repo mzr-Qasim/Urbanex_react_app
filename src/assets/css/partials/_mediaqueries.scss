@@ -1,13 +1,22 @@
+@media (max-width:1199px) {
+    .last_projects_inner {
+    .project-card {
+        figure {
+            aspect-ratio: 1/.8;
+        }
+    }
+}
+}
+
 @media (max-width:991px) {
     .nav-collapse {
-        overflow: hidden;
         position: fixed;
         top: 0;
         left: 0;
         width: 300px;
         height: 100vh;
         transform: translateX(-100%);
-        background-color: black;
+        background-color: $black-color;
         transition: all ease-in-out .5s;
         z-index: 100;
         display: flex;
@@ -25,7 +34,7 @@
                 }
 
                 a {
-                    color: white;
+                    color: $white-color;
                 }
             }
         }
@@ -36,13 +45,18 @@
     }
 
     section.About_Us_Section {
-        .left-section {
-            padding-bottom: 5rem;
-        }
         .right-section{
             figure{
-                aspect-ratio: 1/.7;
+                aspect-ratio: 1/.8;
             }
         }
     }
+     .last_projects_inner {
+    .project-card {
+        figure {
+            aspect-ratio: 1/.5;
+        }
+    }
 }
+}
+

@@ -13,8 +13,6 @@ export function MainHero() {
                             <a href="" className='theme-btn primary-btn-icon'><i className='icon-theme-btn'></i>VIEW MORE</a>
                         </div>
                     </div>
-                    <div className="main-hero-pagination">
-                    </div>
                 </div>
             </div>
         </section>
