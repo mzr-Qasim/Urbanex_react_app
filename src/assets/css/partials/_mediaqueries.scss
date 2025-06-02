@@ -34,4 +34,15 @@
     .ham_btn {
         display: block;
     }
+
+    section.About_Us_Section {
+        .left-section {
+            padding-bottom: 5rem;
+        }
+        .right-section{
+            figure{
+                aspect-ratio: 1/.7;
+            }
+        }
+    }
 }

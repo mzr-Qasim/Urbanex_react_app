@@ -6,6 +6,7 @@ import './assets/css/main.css'
 
 import {Navbar} from "./components/navbar"
 import {MainHero} from './components/main_hero'
+import {Home_About_Us_Section} from './components/Home_About_Us_Section'
 function App() {
 
 
@@ -13,6 +14,7 @@ function App() {
     <div>
       <Navbar />
       <MainHero />
+      <Home_About_Us_Section/>
     </div>
   )
 }

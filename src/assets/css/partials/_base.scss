@@ -12,8 +12,6 @@ body {
 }
 
 
-
-
 h1,
 h2,
 h3,
@@ -55,7 +53,6 @@ button {
     align-items: center;
     justify-content: center;
     width: fit-content;
-    font-weight: 700;
     font-size: clamp(.9rem, 2vw, 1rem);
     transition: all ease-in-out .3s;
 }
@@ -67,6 +64,7 @@ button {
     align-items: center;
     gap: .5rem;
     color: white;
+    font-weight: 700;
     position: relative;
         cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1.5 1.5'><circle cx='0.75' cy='0.75' r='0.4' fill='white'/></svg>") 0.75 0.75, auto!important;
     &::after{
@@ -90,4 +88,25 @@ button {
     }
 
 
+}
+
+.secondary-btn-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    color: black;
+    border: 1px solid black;
+    font-weight: 600;
+
+    &:hover{
+        color: white;
+        background-color: black;
+    }
+}
+
+.section-title{
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    color: black;
+    font-weight: 600;
 }

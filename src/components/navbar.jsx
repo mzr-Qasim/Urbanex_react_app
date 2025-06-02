@@ -9,7 +9,7 @@ export function Navbar() {
             <div className="container custom-container-lg">
                 <div className="nav-inner ">
                     <a href="" className="main_logo"><img src={sitelogo} alt="" /></a>
-                    <div id="nav_collapse" className="nav-collapse">
+                    <div id="nav_collapse" className="nav-collapse side-menu">
                         <ul>
                             <li><a href="" className="nav-links-hover">Home</a></li>
                             <li><a href="" className="nav-links-hover">Services</a></li>
@@ -20,6 +20,7 @@ export function Navbar() {
                         </ul>
                     </div>
                     <button className="ham_btn"><i className="icon-hamburger"></i></button>
+                    {/* icon-ham_close_btn */}
                 </div>
             </div>
         </div>

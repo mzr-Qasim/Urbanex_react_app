@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot?89jjq9");
-  src: url("fonts/icomoon.eot?89jjq9#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?89jjq9") format("truetype"), url("fonts/icomoon.woff?89jjq9") format("woff"), url("fonts/icomoon.svg?89jjq9#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?q3pu6");
+  src: url("fonts/icomoon.eot?q3pu6#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?q3pu6") format("truetype"), url("fonts/icomoon.woff?q3pu6") format("woff"), url("fonts/icomoon.svg?q3pu6#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -22,12 +22,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-hamburger:before {
+.icon-ham_close_btn:before {
   content: "\e900";
 }
 
-.icon-theme-btn:before {
+.icon-hamburger:before {
   content: "\e901";
+}
+
+.icon-theme-btn:before {
+  content: "\e902";
 }
 
 /*!
@@ -12051,7 +12055,6 @@ button {
   justify-content: center;
   width: -moz-fit-content;
   width: fit-content;
-  font-weight: 700;
   font-size: clamp(0.9rem, 2vw, 1rem);
   transition: all ease-in-out 0.3s;
 }
@@ -12061,6 +12064,7 @@ button {
   align-items: center;
   gap: 0.5rem;
   color: white;
+  font-weight: 700;
   position: relative;
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1.5 1.5'><circle cx='0.75' cy='0.75' r='0.4' fill='white'/></svg>") 0.75 0.75, auto !important;
 }
@@ -12080,6 +12084,26 @@ button {
 }
 .primary-btn-icon i {
   font-size: 0.8rem;
+}
+
+.secondary-btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: black;
+  border: 1px solid black;
+  font-weight: 600;
+}
+.secondary-btn-icon:hover {
+  color: white;
+  background-color: black;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  color: black;
+  font-weight: 600;
 }
 
 .navbar-wrapper {
@@ -12188,6 +12212,37 @@ button {
   z-index: 50;
 }
 
+.sideMenuShow {
+  transform: translateX(0) !important;
+}
+
+section.About_Us_Section {
+  padding-bottom: 5rem;
+}
+section.About_Us_Section .col-inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+section.About_Us_Section .left-section {
+  padding: 3rem 0;
+}
+section.About_Us_Section .left-section p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+section.About_Us_Section .right-section figure {
+  width: 100%;
+  aspect-ratio: 1/1.2;
+  height: 100%;
+}
+section.About_Us_Section .right-section figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media (max-width: 991px) {
   .nav-collapse {
     overflow: hidden;
@@ -12217,5 +12272,11 @@ button {
   }
   .ham_btn {
     display: block;
+  }
+  section.About_Us_Section .left-section {
+    padding-bottom: 5rem;
+  }
+  section.About_Us_Section .right-section figure {
+    aspect-ratio: 1/0.7;
   }
 }/*# sourceMappingURL=main.css.map */
