@@ -1,11 +1,11 @@
 @media (max-width:1199px) {
     .last_projects_inner {
-    .project-card {
-        figure {
-            aspect-ratio: 1/.8;
+        .project-card {
+            figure {
+                aspect-ratio: 1/.8;
+            }
         }
     }
-}
 }
 
 @media (max-width:991px) {
@@ -45,18 +45,26 @@
     }
 
     section.About_Us_Section {
-        .right-section{
-            figure{
+        .left-section {
+            .left-section-inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .right-section {
+            figure {
                 aspect-ratio: 1/.8;
             }
         }
     }
-     .last_projects_inner {
-    .project-card {
-        figure {
-            aspect-ratio: 1/.5;
+
+    .last_projects_inner {
+        .project-card {
+            figure {
+                aspect-ratio: 1/.5;
+            }
         }
     }
 }
-}
-

@@ -12358,6 +12358,11 @@ section.last_projects .load-more-btn {
   .ham_btn {
     display: block;
   }
+  section.About_Us_Section .left-section .left-section-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   section.About_Us_Section .right-section figure {
     aspect-ratio: 1/0.8;
   }
