@@ -8,7 +8,7 @@ import { Navbar } from "./components/navbar"
 import { MainHero } from './components/main_hero'
 import { Home_About_Us_Section } from './components/Home_About_Us_Section'
 import { LastProjectCard } from './components/last_project_card'
-
+import { Home_Services } from './components/Home_Servies'
 function App() {
 
 
@@ -42,6 +42,7 @@ function App() {
           </div>
         </div>
       </section>
+      <Home_Services/>
     </div>
   )
 }
